@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="gemStore">
   <head>
-    <title>Railsy Gemstore</title>
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </head>
 
-   <body ng-controller="StoreController as store">
+  <body ng-controller="StoreController as store">
     <!--  Store Header  -->
     <header>
       <h1 class="text-center">Flatlander Crafted Gems</h1>
@@ -30,3 +30,5 @@
     </div>
   </body>
 </html>
+
+
