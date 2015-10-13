@@ -1,3 +1,3 @@
 //= require angular
-//= require angular-ui-router
-//= require_tree .
+//= require app
+//= require gemstore-app/products/products
