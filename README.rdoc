@@ -1,1 +1,0 @@
-Using tutorial from https://thinkster.io/angular-rails to try to link my gem store app to a Rails database.
