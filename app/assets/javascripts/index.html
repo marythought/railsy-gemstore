@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="gemStore">
+<html ng-app="gemStoreApp">
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -7,12 +7,19 @@
     <script type="text/javascript" src="app.js"></script>
   </head>
 
-  <body ng-controller="StoreController as store">
+  <body>
+  <div ng-controller="StoreController as store" ng-init="index()">
     <!--  Store Header  -->
     <header>
-      <h1 class="text-center">Flatlander Crafted Gems</h1>
+      <h1 class="text-center">Flatlander Crafted Gems--THIS IS INDEX.HTML</h1>
       <h2 class="text-center">an Angular store</h2>
     </header>
+
+    <section>
+      <input type="text" name="name" ng-model="newGemstone.name">
+      <input type="text" name="price" ng-model="newGemstone.price">
+      <button ng-click="create(newGemstone)">Create Gemstone</button>
+    </section>
 
     <!--  Products Container  -->
     <div class="list-group">
@@ -28,6 +35,7 @@
       <product-tabs></product-tabs>
       </div>
     </div>
+  </div>
   </body>
 </html>
 

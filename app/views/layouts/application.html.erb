@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="gemStore">
+<html ng-app="gemStoreApp">
   <head>
     <title>Railsy Gemstore</title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -7,9 +7,11 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body ng-controller="StoreController as store">
-  <%= render 'layouts/angular' %>
-  <% yield %>
+  <body>
+    <div ng-controller="StoreController as store" ng-init="index()">
+    <%= render 'layouts/angular' %>
+    <% yield %>
 
+    </div>
   </body>
 </html>

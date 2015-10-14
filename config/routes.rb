@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   end
 
   root to: 'gemstones#index'
-  resources :gemstones
+  resources :gemstones do
+    resources :reviews
+  end
+
+  resources :reviews
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -15,8 +15,6 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
-
-
 # to generate a new test:
 # rails generate minitest:feature articles/CreatingArticles --spec
 
