@@ -20,4 +20,5 @@ class GemstoneStoriesTest < ActionDispatch::IntegrationTest
     #   { gemstone:
     #     { name: 'Emerald', price: 20.56 }
     #   }...FINISH
+  end
 end
