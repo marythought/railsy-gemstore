@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="gemStore">
+<html ng-app="gemStoreApp">
   <head>
     <title>Railsy Gemstore</title>
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -7,26 +7,11 @@
     <%= csrf_meta_tags %>
   </head>
 
-   <body ng-controller="StoreController as store">
-    <!--  Store Header  -->
-    <header>
-      <h1 class="text-center">Flatlander Crafted Gems</h1>
-      <h2 class="text-center">an Angular store</h2>
-    </header>
+  <body>
+    <div ng-controller="StoreController as store" ng-init="index()">
+    <%= render 'layouts/angular' %>
+    <% yield %>
 
-    <!--  Products Container  -->
-    <div class="list-group">
-      <!--  Product Container  -->
-      <div class="list-group-item" ng-repeat="product in store.products">
-        <product-title></product-title>
-
-        <!-- Image Gallery  -->
-        <product-gallery></product-gallery>
-
-
-        <!-- Product Tabs  -->
-      <product-tabs></product-tabs>
-      </div>
     </div>
   </body>
 </html>

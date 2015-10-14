@@ -1,0 +1,26 @@
+<!--  Store Header  -->
+<header>
+  <h1 class="text-center">Flatlander Crafted Gems</h1>
+  <h2 class="text-center">an Angular store</h2>
+</header>
+
+<section id="newGemForm">
+  <input type="text" name="name" ng-model="newGemstone.name">
+  <input type="text" name="price" ng-model="newGemstone.price">
+  <button ng-click="create(newGemstone)">Create Gemstone</button>
+</section>
+
+<!--  Products Container  -->
+<div class="list-group">
+  <!--  Product Container  -->
+  <div class="list-group-item" ng-repeat="product in products">
+    <product-title></product-title>
+
+    <!-- Image Gallery  -->
+    <product-gallery></product-gallery>
+
+
+    <!-- Product Tabs  -->
+  <product-tabs></product-tabs>
+  </div>
+</div>

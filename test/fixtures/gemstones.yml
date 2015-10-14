@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ruby:
+  name: Ruby
+  description: A lovely stone.
+  shine: 1
+  price: 110.50
+  rarity: 7
+  color: red
+  faces: 5
+
+jade:
+  name: Jadestone
+  description: Nice green stone.
+  shine: 4
+  price: 50.50
+  rarity: 3
+  color: green
+  faces: 1

@@ -1,21 +1,13 @@
-(function(){
-  var app = angular.module('gemStore', ['store-products']);
+//= require_self
+//= require_tree ./gemstore-app
 
-  // use this for connecting to an API or outside datasource
-  app.controller('StoreController', [ '$http',function($http){
-    var store = this;
-    store.products = [];
-    $http.get( "<%= asset_path 'gemstore-app/products/products.json' %>" ).success(function(data){
-      store.products = data;
-    });
+(function() {
+  var app = angular.module('gemStoreApp', ['store-products']);
+
+  app.config(['$httpProvider', function($httpProvider){
+    $httpProvider.defaults.headers.common['X-CSRF-Token'] =
+      document.querySelector('meta[name=csrf-token]').content;
+    $httpProvider.defaults.headers.common.Accept =
+      'application/json';
   }]);
-
-  app.controller("ReviewController", function(){
-    this.review = {};
-    this.addReview = function(product){
-      this.review.createdOn = Date.now();
-      product.reviews.push(this.review);
-      this.review = {};
-    };
-  });
-})();
+})()
