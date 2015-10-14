@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+  namespace :api, defaults: {format: 'json'} do
+    namespace :v1 do
+      resources :gemstones
+    end
+  end
 
-root to: 'gemstones#index'
-
-resources :gemstones
+  root to: 'gemstones#index'
+  resources :gemstones
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
