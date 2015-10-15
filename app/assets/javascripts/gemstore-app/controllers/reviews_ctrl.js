@@ -1,13 +1,13 @@
 (function(){
   var app = angular.module('gemStoreApp');
-  app.controller('StoreController', [ '$scope', '$http', function($scope, $http) {
-    $scope.products = [];
+  app.controller('ReviewController', [ '$scope', '$http', function($scope, $http) {
+    $scope.reviews = [];
     $scope.errors = [];
 
     $scope.index = function() {
-      $http.get( "/api/v1/gemstones" )
+      $http.get( "/api/v1/gemstones/" + gemstone.id + "/")
         .success(function(data) {
-          $scope.products = data.gemstones;
+          $scope.reviews = data.gemstones;
         })
         .error(function(data) {
           $scope.errors.push(data);
@@ -19,7 +19,7 @@
     $scope.create = function(gemstone){
       $http.post( "/api/v1/gemstones", { gemstone: gemstone })
         .success(function(data) {
-          $scope.products.unshift(data.gemstone);
+          $scope.reviews.unshift(data.gemstone);
           $scope.newGemstone = {};
         })
         .error(function(data, status) {
@@ -48,7 +48,7 @@
       })
         .success(function(data) {
           gemstone.deleteConfirm = false;
-          $scope.products.splice($scope.products.indexOf(gemstone), 1);
+          $scope.reviews.splice($scope.reviews.indexOf(gemstone), 1);
       })
         .error(function(data, status) {
           $scope.errors.push(data);
