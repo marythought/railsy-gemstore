@@ -4,17 +4,18 @@
   <h2 class="text-center">an Angular store</h2>
 </header>
 
-<section id="newGemForm">
-  <label for="name">Name<input type="text" name="name" ng-model="newGemstone.name"></label>
-  <label for="price">Price<input label="price" value="price" type="text" name="price" ng-model="newGemstone.price"></label>
-  <label for "shine">Shine<input label="shine" value="shine" type="text" name="shine" ng-model="newGemstone.shine"></label>
-  <button ng-click="create(newGemstone)">Create Gemstone</button>
-</section>
-
 <!--  Products Container  -->
 <div class="list-group">
   <!--  Product Container  -->
+  <section id="newGemForm">
+    <label for="name">Name<input type="text" name="name" ng-model="newGemstone.name"></label>
+    <label for="price">Price<input label="price" value="price" type="text" name="price" ng-model="newGemstone.price"></label>
+    <label for "shine">Shine<input label="shine" value="shine" type="text" name="shine" ng-model="newGemstone.shine"></label>
+    <button ng-click="create(newGemstone)">Create Gemstone</button>
+  </section>
+
   <div class="list-group-item" ng-repeat="product in products">
+
     <product-title></product-title>
 
     <!-- Image Gallery  -->
@@ -34,11 +35,15 @@
       <input type="text" data-ng-model="product.shine">
       <button data-ng-click="update(product)">Save</button>
       <button data-ng-click="product.editing = false">Cancel</button>
+      <ul ng-repeat="error in errors">
+        <li>Error: {{error}}</li>
+      </ul>
     </div>
 
     <div data-ng-show="product.deleteConfirm">
       <button data-ng-click="destroy(product)">Confirm</button>
       <button data-ng-click="product.deleteConfirm = false">Cancel</button>
     </div>
+
   </div>
 </div>

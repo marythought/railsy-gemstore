@@ -16,7 +16,7 @@ module API
       def create
         gemstone = Gemstone.new(gemstone_params)
         if gemstone.save
-          render json: gemstone, status: :created
+          render json: {url: gemstone_path(gemstone), gemstone: gemstone }, status: :created
         else
           render json: gemstone.errors, status: :unprocessable_entity
         end

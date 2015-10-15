@@ -19,8 +19,6 @@
         this.setCurrent = function(index){
           this.current = index || 0;
         };
-        this.editing = false;
-        this.deleteConfirm = true;
       },
       controllerAs: "gallery"
     };
@@ -39,6 +37,13 @@
         this.isSet = function(checkTab){
           return this.tab === checkTab;
         };
+        this.editing = false;
+        this.deleteConfirm = true;
+        // this.toggleEdit = function(product) {
+        //   var temp = product;
+        //
+
+        // };
       },
       controllerAs: "tab"
     };
