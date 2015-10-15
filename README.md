@@ -13,6 +13,7 @@ See it at (https://railsy-gemstore.herokuapp.com/).
 
 * (https://www.codeschool.com/courses/shaping-up-with-angular-js)
 * (https://thinkster.io/angular-rails) <-- I used parts of this tutorial and parts of a Code Fellows in-class demonstration to connect Angular and Rails.
+* some heavy leaning on (https://github.com/codefellows/angular_rails_oct) and in-class demo for the Angular CRUD functionality
 
 ## Contributing
 

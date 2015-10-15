@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013220723) do
+ActiveRecord::Schema.define(version: 20151014221142) do
 
   create_table "gemstones", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 20151013220723) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "url"
+    t.integer  "gemstone_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "images", ["gemstone_id"], name: "index_images_on_gemstone_id"
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "stars"
