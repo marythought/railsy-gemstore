@@ -1,9 +1,9 @@
 # Gemstore
 
 ## Description
-A Gemstore built on Angular (from the Code School tutorial 'Shape Up with Angular') and integrated with Ruby on Rails. Currently populates from a products.JSON file, but eventually will be linked to the Rails persistent database. Read more about this process and my reflections on Angular at (http://marydickson.com/try-angular/).
+A Gemstore built on Angular (from the Code School tutorial 'Shape Up with Angular') and integrated with Ruby on Rails. Originally populated from a products.JSON file, but was refactored to link to a Rails persistent database. Read more about this process and my reflections on Angular at (http://marydickson.com/try-angular/).
 
-See it at (https://railsy-gemstore.herokuapp.com/).
+Try it at (https://railsy-gemstore.herokuapp.com/).
 
 ## Authors
 
